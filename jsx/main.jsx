@@ -50,10 +50,10 @@ var Application = React.createClass({
 
     router.init();
 
-		Hyperstore.items.find({}, {sort: {votes: -1, _id: 1}}, function(res, err) {
+/*		Hyperstore.items.find({}, function(res, err) {
 			if(!this.state.first) this.notify();
 			else this.setState({first: false});
-		}.bind(this));
+		}.bind(this));*/
 	},
 	notify: function() {
 		$(this.getDOMNode()).find('.nav-alerts').show();
@@ -70,9 +70,9 @@ var Application = React.createClass({
 		return (
 			<main className="main">
 				<nav className="navbar navbar-default navbar-fixed-top" role="navigation">
-					<a className="navbar-brand hidden-xs" href="/#">Realtime Design</a>
+					<a className="navbar-brand" href="/#">Realtime Design</a>
         	<div className="pull-right">
-            <a className="nav-icon" onClick={this.readNotify}><i className="fa fa-bell" /><div className="nav-alerts label-danger"><span>{this.state.alerts}</span></div></a>
+            <a style={{display: 'none'}} className="nav-icon" onClick={this.readNotify}><i className="fa fa-bell" /><div className="nav-alerts label-danger"><span>{this.state.alerts}</span></div></a>
             <a className="nav-icon" href="#" data-toggle="modal" data-target="#addItem"><i className="fa fa-pencil" /></a>
           </div>
 	      </nav>
