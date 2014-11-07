@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>React Backwire List</title>
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.velocity.min.js"></script>
+    <script type="text/javascript" src="/js/lodash.min.js"></script>
+    <script type="text/javascript" src="/js/react-dev.js"></script>
+    <script type="text/javascript" src="/js/jsxtrans.js"></script>
+    <style type="text/css">
+    	li {
+    		height: 20px;
+    	}
+    </style>
+	</head>
+	<body>
+		<script type="text/jsx">
+			/**
+			 * @jsx React.DOM
+			 */
+
+			var example = [
+				{_id: "a", text: "Hello Bird"},
+				{_id: "b", text: "Hello World"},
+				{_id: "c", text: "Hello Cow"},
+				{_id: "d", text: "Hello Dog"},
+				{_id: "e", text: "Hello Cat"},
+				{_id: "f", text: "Hello Fox"},
+				{_id: "g", text: "Hello Owl"},
+				{_id: "h", text: "Hello Bat"},
+				{_id: "i", text: "Hello Seal"},
+			];
+
+			var List = React.createClass({
+				getInitialState: function() {
+					return {items: example};
+				},
+				render: function() {
+					var li = [];
+					for (var i = 0; i < this.state.items.length; i++) {
+						li.push(<ListItem key={this.state.items[i]._id} text={this.state.items[i].text} />);
+					};
+					return (
+						<ul>
+							{li}
+						</ul>
+					);
+				}
+			});
+
+			var ListItem = React.createClass({
+				componentDidMount: function() {
+					console.log(12);
+				},
+				render: function() {
+					return (
+						<li>
+							{this.props.text}	
+						</li>
+					);
+				}
+			});
+
+			React.renderComponent(<List />, document.querySelector('body'));
+		</script>
+	</body>
+</html>

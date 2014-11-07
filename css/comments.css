@@ -1,0 +1,42 @@
+.nocomments {
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+
+.Comments-updates {
+	font-size: 14px;
+	border-radius: 0;
+	border-bottom-right-radius: 4px;
+	position: relative;
+	cursor: pointer;
+	top: -20px;
+	display: none;
+	height: 0;
+	max-width: 200px;
+}
+
+.Comment {
+	margin-bottom: 20px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-bottom: 1px solid #98978b;
+	overflow: hidden;
+}
+
+.Comment-avatar {
+	max-height: 40px;
+	border-radius: 40px;
+	margin-right: 15px;
+}
+
+.Comment-name {
+	position: relative;
+	top: 5px;
+	font-size: 24px;
+}
+
+.Comment-text {
+	margin-left: 55px;
+	margin-top: 15px;
+	font-size: 18px;
+}
