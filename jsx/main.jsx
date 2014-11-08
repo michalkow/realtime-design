@@ -20,7 +20,7 @@ if(window.performance == undefined || window.performance == null) {
 
 var randomNames = ["Jenee","Yi","Chet","Yvonne","Dia","Refugio","Chuck","Robbie","Fidelia","Adrian","Guillermo","Anderson","Meta","Alyssa","Napoleon","Lashawnda","Marcelo","Catheryn","Weston","Waneta","Twila","Ellan","Danita","Janine","Toshiko","Julee","Phung","Sonja","Wallace","Darcel"];
 
-Hyperstore.initialize('realtime', ['items', 'comments']);
+Hyperstore.initialize('design', ['items', 'comments']);
 
 var Application = React.createClass({
 	getInitialState: function() {
